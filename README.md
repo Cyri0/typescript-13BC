@@ -130,3 +130,29 @@ let user: Person = {
   age: 25
 };
 ```
+
+## Generikusok
+
+A TypeScript generikusai lehetővé teszik a típusbiztonság megőrzését úgy, hogy közben rugalmas és újrafelhasználható kódszerkezeteket írhatunk. Generikus típusokkal olyan függvényeket, osztályokat vagy interfészeket készíthetünk, amelyek különböző típusokkal működnek anélkül, hogy konkrét típusokat kellene előre meghatározni.
+
+Miért fontosak a generikusok?
+
+1. **Típusbiztonság:** A generikus típusok segítségével a függvények és osztályok megtartják az erős típusellenőrzést, így elkerülhetők a futásidejű típushibák.
+2. **Újrafelhasználhatóság:** A generikusokkal olyan általános megoldásokat hozhatunk létre, amelyek különböző típusokkal is működnek, anélkül, hogy újra és újra kellene írni a kódot.
+3. **Rugalmasság:** A generikus típusokkal írt függvények vagy osztályok bármilyen típusú adatot kezelhetnek, de közben továbbra is szigorú típusellenőrzés alatt állnak.
+
+### Generikus függvények
+A generikus típusokkal rendelkező függvények olyan típusparamétereket fogadnak, amelyek bármilyen típusúak lehetnek. A leggyakoribb jelölés T típus használata (de bármi lehet).
+
+```typescript
+function identity<T>(arg: T): T {
+  return arg;
+}
+```
+
+```typescript
+let output1 = identity<string>("Hello");
+let output2 = identity<number>(42);
+```
+
+*Egyelőre elég ennyi... 😉*
